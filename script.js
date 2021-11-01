@@ -9,7 +9,7 @@ const player2 = document.querySelector('#player-2 .player-score');
 
 let player = {
     X: 'Human',
-    O: 'Computer',
+    O: 'PC',
     X_S: 0,
     O_S: 0
 }
@@ -167,7 +167,7 @@ function nextMove() {
 }
 
 cells.forEach((cell, index) => {
-    cell.addEventListener('click', e => {
+    cell.addEventListener('click', () => {
         if (cell.innerHTML === '' && checkWinner() === 'nil') {
             if (turn === X) {
                 cell.classList.add('board-cell-x');
